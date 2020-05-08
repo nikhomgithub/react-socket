@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
         height:'50px'
     },
 }));
-
+//ใน material ui เราใช้กำหนด
 const Dashboard=(props)=>{
     const classes = useStyles();
     const [textvalues, setTextvalues] = React.useState('');
