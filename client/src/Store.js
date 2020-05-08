@@ -52,6 +52,8 @@ const StoreContextProvider=(props)=>{
 //การใช้งาน เช่น การส่งค่าไปยังเซิฟเวอร์ด้วยคำสั่ง socket.emit('ชื่อหัวข้อ',value)
 //ส่วนการรอรับ value ด้วยคำสั่ง socket.on('ชื่อหัวข้อ',value=>{ callback() })
 //ในที่นี้ callback คือ dispatch (type ชื่อฟังก์ชัน, payload ค่าแวลู )
+  
+//ในตัวอย่างนี้ เราสร้างค่า allchat มาใช้นั่นเอง แต่ ปกติ ต้องมาจาก server นะ   
   if(!socket){
         socket=io(':3001')
         socket.on('chat message',(msg)=>{
