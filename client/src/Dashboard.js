@@ -50,20 +50,24 @@ const useStyles = makeStyles(theme => ({
         height:'50px'
     },
 }));
-//ใน material ui เราใช้กำหนด
+//ใน material ui เราใช้กำหนด css ด้วย makeStyles()
+//
 const Dashboard=(props)=>{
     const classes = useStyles();
     const [textvalues, setTextvalues] = React.useState('');
     //CTX store
-    const {allChats,sendChatAction,user,dispatch} = React.useContext(StoreContext)        //{allchats:allChats}
+    const {allChats,dispatch,sendChatAction,user} = React.useContext(StoreContext)        //{allchats:allChats}
     console.log(allChats)
     //topic1: (3) [{…}, {…}, {…}]
     //topic2: (3) [{…}, {…}, {…}]
     const topics = Object.keys(allChats) //creat array from keys of object
     //console.log(topics)
     //["topic1", "topic2"]
-    const [activeTopic, changeActivetopic] = React.useState(topics[0])
-
+    const [activeTopic, changeActivetopic] = React.useState(topics[0]) //ค่าเริ่มต้นคือ topic[0]
+    //<list> ถ้าเรา onClick=ก็กำหนด ค่า activeTopic ใหม่ 
+    //เราเลือกแสดง  allChat[activeTopic]
+    
+    //
     return(
     <div>
         <Paper className={classes.root}>
