@@ -60,7 +60,7 @@ const StoreContextProvider=(props)=>{
     }
 
     const user="Nikhom"+Math.random(100).toFixed(2)
-
+    //เราสร้าง user ให้กับ ด้วย ค่า Nikhom+random สองตำแหน่ง 
     const sendChatAction = (value) =>{
         socket.emit('chat message',value)
     }
